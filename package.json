@@ -6,15 +6,17 @@
     "scripts": {
         "server": "npx nodemon server.js",
         "client": "npm start --prefix client",
-        "start": "concurrently \"npm run server\" \"npm run client\" ",
-        "deploy:code": "git add . && git commit -m 'Code backup' && git push",
-        "deploy": "npm run deploy:code"
+        "start": "node server.js",
+        "deploy:code": "git add . && git commit -m 'Some changes' && git push",
+        "deploy:site": "git push heroku master",
+        "deploy": "npm run build --prefix client && npm run deploy:code && npm run deploy:site"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "bcryptjs": "^2.4.3",
+        "compression": "^1.7.4",
         "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
         "dotenv": "^10.0.0",
@@ -31,5 +33,8 @@
     "devDependencies": {
         "concurrently": "^6.2.1",
         "nodemon": "^2.0.12"
+    },
+    "engines": {
+        "node": ">=10.0.0"
     }
 }
