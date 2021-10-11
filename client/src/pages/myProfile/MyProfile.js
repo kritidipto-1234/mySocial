@@ -86,6 +86,7 @@ function MyProfile(props) {
                         <>
                             &nbsp;
                             <FaInfoCircle />
+                            &nbsp;
                             {" " + totalUnreadChats}
                         </>
                     )}
