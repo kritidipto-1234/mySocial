@@ -49,3 +49,11 @@ input {
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(11, 36, 48);
 }
+
+.spinner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
