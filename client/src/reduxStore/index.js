@@ -207,7 +207,7 @@ const reduxDevToolEnabler =
 const store = createStore(
     reducer,
     initialState,
-    compose(applyMiddleware(thunk), reduxDevToolEnabler)
+    compose(applyMiddleware(thunk))
 );
 
 export default store;
