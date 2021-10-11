@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const util = require("util");
 const crypto = require("crypto");
 const sendEmail = require("../utils/email");
-const config = require("../utils/config");
+const config = require("../utils/config.js");
 
 exports.generateAccessToken = (payload) => {
     return jwt.sign(payload, process.env.JWT_SECRET_STRING, {
@@ -129,7 +129,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
     const resetToken = user.createPasswordResetToken();
     await user.save({ validateBeforeSave: false });
-
+    console.log(config.client);
     const resetUrl = `${config.client}/resetPassword/${resetToken}`;
     const message = `Reset Password link : ${resetUrl} (Valid for only 10 mins)`;
     const subject = "MySocial Password reset link ";
