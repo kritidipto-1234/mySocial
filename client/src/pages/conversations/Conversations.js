@@ -9,6 +9,7 @@ import { AppContext } from "../../contextStore/appContext";
 import { actionCreators, actions } from "../../reduxStore/index";
 import AllFriendsChatList from "./AllFriendsChatList";
 import { MessageContext } from "../../contextStore/messageContext";
+import { SpinnerCircular } from "spinners-react";
 
 function Conversations(props) {
     const dispatch = useDispatch();
@@ -26,32 +27,10 @@ function Conversations(props) {
         dispatch(actionCreators.fetchLastChatTimes());
     }, [dispatch, user]);
 
-    // const logoutHandler = async function (e) {
-    //     try {
-    //         e.preventDefault();
-    //         const res = await axios({
-    //             withCredentials: true,
-    //             method: "GET",
-    //             url: `${config.url}/api/users/logout`,
-    //         });
-
-    //         if (res.data.status === "success") {
-    //             dispatch({ type: actions.LOGOUT_USER });
-    //             history.replace("/");
-    //             appCtx.removeSocket();
-    //         } else throw new Error(res);
-    //     } catch (e) {
-    //         displayMessage(
-    //             "Failed to logout " + e.response?.data.message,
-    //             true
-    //         );
-    //     }
-    // };
-
     if (!user)
         return (
             <div className={styles.Conversations}>
-                <b>Loading ...</b>
+                <SpinnerCircular enabled={!user} />
             </div>
         );
 
