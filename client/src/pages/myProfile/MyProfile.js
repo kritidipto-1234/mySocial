@@ -12,6 +12,7 @@ import styles from "./css/MyProfile.module.scss";
 import MyFriends from "./MyFriends";
 import PendingRequestList from "./PendingRequestList";
 import { FaInfoCircle } from "react-icons/fa";
+import { SpinnerCircular } from "spinners-react";
 
 const MyProfileContext = React.createContext({
     renderToken: null,
@@ -62,7 +63,12 @@ function MyProfile(props) {
     if (!currentUser)
         return (
             <div className={styles.MyProfile}>
-                <b>Loading...</b>
+                <div className="spinner">
+                    <SpinnerCircular
+                        className={"spinner"}
+                        enabled={!currentUser}
+                    />
+                </div>{" "}
             </div>
         );
 

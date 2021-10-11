@@ -30,7 +30,9 @@ function Conversations(props) {
     if (!user)
         return (
             <div className={styles.Conversations}>
-                <SpinnerCircular className={"spinner"} enabled={!user} />
+                <div className="spinner">
+                    <SpinnerCircular className={"spinner"} enabled={!user} />
+                </div>
             </div>
         );
 
