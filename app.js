@@ -16,7 +16,7 @@ const app = express();
 app.use(cors({ credentials: true, origin: config.client }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(morgan("dev")); //logging server request/responses
+// app.use(morgan("dev")); //logging server request/responses
 app.use(compression());
 
 app.use("/api/users", userRouter);
