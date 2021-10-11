@@ -3,7 +3,6 @@ const morgan = require("morgan");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const userRouter = require("./routes/userRoute");
-// const postRouter = require("./routes/postRoute");
 const chatRouter = require("./routes/chatRoute");
 const friendRouter = require("./routes/friendRoute");
 const path = require("path");
@@ -22,7 +21,6 @@ app.use(compression());
 
 app.use("/api/users", userRouter);
 app.use("/api/chats", chatRouter);
-// app.use("/api/posts", postRouter);
 app.use("/api/friendships", friendRouter);
 
 app.use(express.static(`${__dirname}/client/build`)); //static fontend files
