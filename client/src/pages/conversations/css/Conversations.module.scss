@@ -1,0 +1,85 @@
+@import "../../../utils/variables";
+
+.Conversations {
+    height: 100%;
+    background-color: $darker-color;
+
+    img {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+    }
+
+    .navbar {
+        height: 10%;
+        display: flex;
+        justify-content: space-around;
+        color: $lightest-color;
+        border-bottom: 3px solid white;
+
+        .pageHeader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        .activeUser {
+            & > * {
+                display: block;
+                margin: 0px 5px;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .profileLink {
+                color: white;
+                font-weight: bolder;
+                font-size: 20px;
+                text-decoration: none;
+                border: 3px solid white;
+                padding: 6px 10px;
+                border-radius: 25px;
+                transition: all 0.2s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .allUsers {
+        flex: 1;
+    }
+    input {
+        width: 500px;
+        height: 50px;
+    }
+
+    button {
+        width: 100px;
+        height: 50px;
+    }
+
+    .Container {
+        height: 90%;
+        display: flex;
+
+        .notConnectedMessage {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+    }
+    .userList {
+        overflow-y: scroll;
+        height: 80%;
+    }
+}

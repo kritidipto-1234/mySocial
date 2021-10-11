@@ -1,0 +1,58 @@
+@import "../../../utils/variables";
+
+.LandingPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $darker-color;
+    position: relative;
+    height: 100%;
+    input {
+        display: block;
+        margin: 6px;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+
+        & > form > button {
+            display: block;
+            border: none;
+            background-color: $darker-color;
+            color: white;
+            margin: auto;
+            transition: all 0.2s;
+            font-weight: bolder;
+            padding: 5px 10px;
+            &:hover {
+                background-color: $darkest-color;
+            }
+        }
+
+        .buttonContainer > button {
+            border: none;
+            background-color: transparent;
+            color: $darkest-color;
+            font-weight: bolder;
+            text-decoration: underline;
+            margin: 10px 0px 0px 0px;
+        }
+    }
+
+    .iconCredits {
+        bottom: 20px;
+        left: 50%;
+        color: white;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+}

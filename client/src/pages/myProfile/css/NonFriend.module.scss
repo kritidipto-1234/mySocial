@@ -1,0 +1,38 @@
+@import "../../../utils/variables";
+.NonFriend {
+    // border: 1px solid blue;
+    margin: 10px 0px;
+    background-color: $darker-color;
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    .leftSide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+    }
+
+    button {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .NonFriend {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding: 8px;
+        button {
+            margin: 3px;
+        }
+    }
+}

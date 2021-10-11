@@ -1,0 +1,23 @@
+@import "../../../utils/variables";
+
+.MyFriends {
+    border-right: 3px solid white;
+
+    .listHeading {
+        // border: 1px solid green;
+        height: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        border-bottom: 3px solid white;
+    }
+
+    .friendList {
+        height: 92%;
+        // border: 1px solid green;
+        overflow-y: auto;
+    }
+}

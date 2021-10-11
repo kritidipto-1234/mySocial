@@ -1,0 +1,48 @@
+@import "../../../utils/variables";
+
+.PendingRequest {
+    // border: 1px solid blue;
+    margin: 10px 0px;
+    background-color: $darker-color;
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+
+    .leftSide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+    }
+
+    button {
+        margin: 0px 3px;
+        font-size: 10px;
+    }
+
+    button.negativeBtn {
+        background-color: rgb(185, 57, 57);
+        &:hover {
+            background-color: rgb(190, 140, 140);
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .PendingRequest {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding: 8px;
+        button {
+            margin: 3px;
+        }
+    }
+}

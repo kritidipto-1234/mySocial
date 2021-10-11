@@ -1,0 +1,51 @@
+@import "./utils/variables";
+
+* {
+    box-sizing: border-box;
+}
+
+.App {
+    margin: 0px;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+#root {
+    background-color: pink;
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+input {
+    outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgb(28, 66, 83);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(11, 36, 48);
+}

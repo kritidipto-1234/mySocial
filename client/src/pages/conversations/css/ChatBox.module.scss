@@ -1,0 +1,105 @@
+@import "../../../utils/variables";
+
+.ChatBox {
+    height: 100%;
+    flex: 1;
+    border-left: 3px solid white;
+    // background-color: $lightest-color;
+
+    .chatBoxMessage {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+    }
+
+    .chatBoxHeader {
+        height: 10%;
+        display: flex;
+        align-items: center;
+        background-color: $extra-color;
+
+        img {
+            margin-right: 10px;
+        }
+
+        color: white;
+        font-weight: bold;
+
+        .clearChattingWithBtn {
+            margin: 0px 10px;
+            background-color: transparent;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border: 2px solid white;
+            color: white;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        .Offline {
+            color: red;
+            display: none;
+        }
+
+        .Online {
+            color: rgb(105, 238, 105);
+            font-weight: bolder;
+        }
+    }
+
+    .chatMessageList {
+        overflow-y: scroll;
+        height: 80%;
+        background-color: $lightest-color;
+    }
+
+    .chatSender {
+        background-color: $extra-color;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            .chatInput {
+                border-radius: 30px 0px 0px 30px;
+                border: none;
+                outline: none;
+                width: 80%;
+                max-width: 800px;
+                height: 35px;
+                padding: 0px 20px;
+            }
+
+            .chatSendBtn {
+                max-width: 200px;
+                width: 20%;
+                border-radius: 0px 30px 30px 0px;
+                border: none;
+                outline: none;
+                height: 35px;
+                cursor: pointer;
+                transition: all 0.1s;
+                background-color: rgb(202, 202, 202);
+                &:hover {
+                    background-color: rgb(165, 165, 165);
+                }
+            }
+        }
+    }
+}

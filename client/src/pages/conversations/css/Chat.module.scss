@@ -1,0 +1,55 @@
+@import "../../../utils/variables";
+
+.chatContainer {
+    width: 100%;
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    padding: 7px 10px;
+
+    .Chat {
+        max-width: 70%;
+        min-width: 30%;
+        border-radius: 15px;
+        // border: 1px solid blue;
+        word-break: break-all;
+        padding: 10px;
+
+        div {
+            // min-width: 500px;
+        }
+
+        .chatContent {
+            padding: 0px 0px 5px 0px;
+            color: white;
+        }
+        .chatTime {
+            color: rgb(97, 97, 97);
+            font-weight: 600;
+            font-size: 12px;
+            text-align: right;
+        }
+    }
+
+    &.other {
+        justify-content: flex-start;
+
+        .Chat {
+            background-color: $lighter-color;
+            .chatContent {
+                color: black;
+            }
+        }
+    }
+    &.me {
+        justify-content: flex-end;
+
+        .Chat {
+            background-color: $darker-color;
+
+            .chatTime {
+                color: rgb(194, 194, 194);
+            }
+        }
+    }
+}
