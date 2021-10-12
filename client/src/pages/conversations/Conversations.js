@@ -13,8 +13,11 @@ import { SpinnerCircular } from "spinners-react";
 
 function Conversations(props) {
     const dispatch = useDispatch();
-    const history = useHistory();
     const user = useSelector((state) => state.user.currentUser, shallowEqual);
+    const chattingWith = useSelector(
+        (state) => state.chat.chattingWith,
+        shallowEqual
+    );
     const appCtx = useContext(AppContext);
     const friends = useSelector((state) => state.user.friends, shallowEqual);
     const { displayMessage } = useContext(MessageContext);
@@ -57,8 +60,12 @@ function Conversations(props) {
                 )}
                 {appCtx.socket && appCtx.socket?.connected && (
                     <>
-                        <AllFriendsChatList friends={friends} />
-                        <Chatbox />
+                        {(window.outerWidth >= config.mobileWidth ||
+                            !chattingWith) && (
+                            <AllFriendsChatList friends={friends} />
+                        )}
+                        {(window.outerWidth >= config.mobileWidth ||
+                            chattingWith) && <Chatbox />}
                     </>
                 )}
             </div>

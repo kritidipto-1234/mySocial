@@ -1,6 +1,8 @@
+@import "../../../utils/variables";
+
 .AccountSection {
     overflow-y: auto;
-    width: 40%;
+    flex: 4;
     .heading {
         height: 6%;
         // border: 1px solid black;
@@ -71,6 +73,23 @@
                     margin: 5px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .AccountSection {
+        flex: none;
+        min-height: 500px;
+        border-top: 3px solid white;
+
+        .heading {
+            height: auto;
+            padding: 10px;
+        }
+        .content {
+            height: auto;
+            min-height: 500px;
         }
     }
 }

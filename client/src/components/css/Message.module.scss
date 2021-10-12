@@ -30,3 +30,9 @@
     border: 1px solid blue;
     color: $darkest-color;
 }
+
+@media screen and (max-width: $mobile-width) {
+    .Message {
+        width: 75%;
+    }
+}

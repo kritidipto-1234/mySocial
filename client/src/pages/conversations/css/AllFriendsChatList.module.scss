@@ -47,3 +47,10 @@
         height: 84%;
     }
 }
+
+@media screen and (max-width: $mobile-width) {
+    .AllFriendsChatList {
+        width: 100%;
+        max-width: 100%;
+    }
+}

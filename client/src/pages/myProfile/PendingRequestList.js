@@ -36,7 +36,7 @@ function PendingRequestList(props) {
 
     return (
         <div className={styles.PendingRequestList}>
-            <div className={styles.listHeading}>Pending Friend Requests</div>
+            <div className={styles.listHeading}>Pending Requests</div>
             <div className={styles.requestList}>
                 {requestList.map((r) => (
                     <PendingRequest

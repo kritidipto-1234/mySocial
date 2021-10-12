@@ -33,10 +33,18 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile-width) {
     .Friend {
         flex-direction: column;
         justify-content: space-evenly;
+
+        .leftSide {
+            justify-content: flex-start;
+            // border: 1px solid white;
+            font-size: 12px;
+            width: 100%;
+            word-break: break-all;
+        }
 
         padding: 8px;
         button {
