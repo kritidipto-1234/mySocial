@@ -46,7 +46,7 @@ function Conversations(props) {
                 <div className={styles.activeUser}>
                     <img src={user.photo} alt="Profile" />
                     <Link className={styles.profileLink} to="/myProfile">
-                        {user.name}
+                        {user.name.split(" ")[0]}
                     </Link>
                 </div>
             </div>
