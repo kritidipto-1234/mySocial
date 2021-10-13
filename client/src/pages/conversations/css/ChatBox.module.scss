@@ -108,3 +108,9 @@
         }
     }
 }
+
+@media screen and (max-width: $mobile-width) {
+    .ChatBox {
+        border-left: none;
+    }
+}
