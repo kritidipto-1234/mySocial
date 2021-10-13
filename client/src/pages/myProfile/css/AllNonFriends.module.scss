@@ -9,12 +9,12 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         border-bottom: 3px solid white;
     }
     .nonFriendsList {
         height: 92%;
-        // border: 1px solid green;
+        border: 1px solid $darker-color;
         overflow-y: auto;
     }
 }

@@ -48,7 +48,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 20px;
+                font-size: 16px;
+                text-decoration: underline;
                 border-bottom: 3px solid white;
                 font-weight: bolder;
             }
@@ -103,7 +104,7 @@
 
             .friendSection {
                 flex: none;
-                height: 400px;
+                height: 500px;
                 // border: 1px solid green;
             }
         }
