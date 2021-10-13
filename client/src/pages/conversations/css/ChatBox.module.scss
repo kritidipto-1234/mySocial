@@ -1,9 +1,11 @@
 @import "../../../utils/variables";
 
 .ChatBox {
-    height: 100%;
     flex: 1;
     border-left: 3px solid white;
+    // border: 3px solid pink;
+    display: flex;
+    flex-direction: column;
     // background-color: $lightest-color;
 
     .chatBoxMessage {
@@ -18,7 +20,7 @@
     }
 
     .chatBoxHeader {
-        height: 10%;
+        height: 70px;
         display: flex;
         align-items: center;
         background-color: $extra-color;
@@ -62,13 +64,15 @@
 
     .chatMessageList {
         overflow-y: scroll;
-        height: 80%;
+        // height: 40%;
+        // height: 300px;
+        flex: 1;
         background-color: $lightest-color;
     }
 
     .chatSender {
         background-color: $extra-color;
-        height: 10%;
+        height: 70px;
         display: flex;
         justify-content: center;
         align-items: center;

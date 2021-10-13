@@ -9,9 +9,10 @@
         height: 50px;
         width: 50px;
     }
-
+    display: flex;
+    flex-direction: column;
     .navbar {
-        height: 10%;
+        height: 70px;
         display: flex;
         justify-content: space-around;
         color: $lightest-color;
@@ -65,8 +66,10 @@
     }
 
     .Container {
-        height: 90%;
+        height: 60%;
+        flex: 1;
         display: flex;
+        // border: 10px solid black;
 
         .notConnectedMessage {
             height: 100%;
@@ -81,5 +84,30 @@
     .userList {
         overflow-y: scroll;
         height: 80%;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .Conversations {
+        .navbar {
+            padding: 0px 5px;
+            justify-content: space-between;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            .pageHeader {
+                font-size: 18px;
+            }
+            .activeUser {
+                .profileLink {
+                    margin: 0px 3px;
+                    padding: 3px 5px;
+                    font-weight: 600;
+                    border: 2px solid white;
+                    font-size: 14px;
+                }
+            }
+        }
     }
 }

@@ -28,7 +28,8 @@
         align-items: center;
         text-align: left;
         // border: 1px solid black;
-        width: 170px;
+        flex: 1;
+        margin-right: 3px;
 
         img {
             width: 50px;
@@ -38,10 +39,10 @@
     }
 
     .friendChatInfo {
-        // border: 1px solid black;
+        border: 1px solid black;
         width: 60px;
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
     }
 
