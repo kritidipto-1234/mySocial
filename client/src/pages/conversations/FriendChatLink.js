@@ -68,8 +68,8 @@ function FriendChatLink(props) {
             onClick={onClickHandler}
         >
             <div className={styles.userLinkLeft}>
-                <img src={friend?.photo} alt="Profile" />
-                {" " + friend?.name + " "}
+                <img src={friend?.photo} alt="DP" />
+                {" " + (friend?.name || "Loading") + " "}
             </div>
             <div className={styles.friendChatInfo}>
                 <span className={styles.onlineIndicator}> </span>
