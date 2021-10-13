@@ -1,7 +1,8 @@
 @import "../../../utils/variables";
 
 .ChatBox {
-    flex: 1;
+    height: 100%;
+    width: 100%;
     border-left: 3px solid white;
     // border: 3px solid pink;
     display: flex;

@@ -13,6 +13,7 @@
     flex-direction: column;
     .navbar {
         height: 70px;
+        min-height: 70px;
         display: flex;
         justify-content: space-around;
         color: $lightest-color;
@@ -66,8 +67,8 @@
     }
 
     .Container {
-        height: 60%;
         flex: 1;
+        height: 50%;
         display: flex;
         // border: 10px solid black;
 
@@ -77,6 +78,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             font-size: 30px;
             color: white;
         }
@@ -90,22 +92,22 @@
 @media screen and (max-width: $mobile-width) {
     .Conversations {
         .navbar {
-            padding: 0px 5px;
+            padding: 0px 13px;
             justify-content: space-between;
             img {
                 width: 40px;
                 height: 40px;
             }
             .pageHeader {
-                font-size: 18px;
+                font-size: 20px;
             }
             .activeUser {
                 .profileLink {
                     margin: 0px 3px;
-                    padding: 3px 5px;
+                    padding: 3px 7px;
                     font-weight: 600;
                     border: 2px solid white;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
             }
         }
