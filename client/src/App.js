@@ -11,10 +11,17 @@ import PasswordReset from "./pages/PasswordReset/PasswordReset";
 import isEqual from "lodash.isequal";
 import { SpinnerCircular } from "spinners-react";
 
+function isUserEqual(user1, user2) {
+    return user1?._id === user2?._id;
+}
+
 function App() {
     const dispatch = useDispatch();
     const { initializeNewSocket } = useContext(AppContext);
-    const currentUser = useSelector((state) => state.user.currentUser, isEqual);
+    const currentUser = useSelector(
+        (state) => state.user.currentUser,
+        isUserEqual
+    );
     const location = useLocation();
     const [loadingUser, setLoadingUser] = useState(
         !location.pathname.includes("resetPassword")

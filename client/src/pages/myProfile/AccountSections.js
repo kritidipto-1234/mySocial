@@ -87,7 +87,7 @@ function AccountSection(props) {
 
     const sendFormData = async (formData) => {
         try {
-            messageCtx.displayMessage("Updating...");
+            messageCtx.displayMessage("Updating...", false, 10000);
             const res = await axios({
                 withCredentials: true,
                 method: "PATCH",
