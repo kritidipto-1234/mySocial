@@ -250,7 +250,8 @@ function AccountSection(props) {
                             </span>
                             <input
                                 ref={passwordRef}
-                                placeholder="Current Password required to edit profile"
+                                placeholder="Current Password required"
+                                type="password"
                             />
                         </div>
                         <button onClick={cancelChanges}>Cancel</button>
@@ -278,6 +279,7 @@ function AccountSection(props) {
                             <input
                                 ref={passwordDeleteRef}
                                 placeholder="Password required"
+                                type="password"
                             />
                             <button
                                 className={styles.deleteFormBtn}

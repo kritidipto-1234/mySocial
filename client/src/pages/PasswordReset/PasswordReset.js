@@ -41,10 +41,15 @@ function PasswordReset(props) {
         <div className={styles.PasswordReset}>
             <form onSubmit={submitNewPassword}>
                 <b>Password Reset</b>
-                <input ref={newPasswordRef} placeholder="New Password" />
+                <input
+                    ref={newPasswordRef}
+                    placeholder="New Password"
+                    type="password"
+                />
                 <input
                     ref={newPasswordConfirmRef}
                     placeholder="New Password Confirm"
+                    type="password"
                 />
                 <button>Reset Paassword</button>
             </form>

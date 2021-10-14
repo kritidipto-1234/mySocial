@@ -113,7 +113,11 @@ function LandingPage() {
                 {formType === "login" && (
                     <form onSubmit={loginHandler}>
                         <input ref={emailInputRef} placeholder="Email" />
-                        <input ref={passwordInputRef} placeholder="Password" />
+                        <input
+                            ref={passwordInputRef}
+                            placeholder="Password"
+                            type="password"
+                        />
                         <button type="submit">Login</button>
                     </form>
                 )}
@@ -125,10 +129,15 @@ function LandingPage() {
                             ref={descriptionInputRef}
                             placeholder="Description"
                         />
-                        <input ref={passwordInputRef} placeholder="Password" />
+                        <input
+                            ref={passwordInputRef}
+                            placeholder="Password"
+                            type="password"
+                        />
                         <input
                             ref={passwordConfirmInputRef}
                             placeholder="Password Confirm"
+                            type="password"
                         />
                         <button type="submit">Create Account</button>
                     </form>
