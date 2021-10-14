@@ -3,6 +3,7 @@ const catchAsync = require("../utils/catchAsync");
 const Friendship = require("../model/friendshipModel");
 const FriendRequest = require("../model/friendRequestModel");
 const User = require("../model/userModel");
+const Chat = require("../model/chatModel");
 
 exports.fetchFriends = async (userId) => {
     const allFriendships = await Friendship.find({
@@ -93,6 +94,12 @@ exports.deleteFriend = catchAsync(async (req, res, next) => {
         return next(new AppError(404, "Friendship doesnt exist"));
 
     await Friendship.deleteOne(filterObj);
+    await Chat.deleteMany({
+        $or: [
+            { sender: req.user._id, receiver: req.body.friendId },
+            { receiver: req.user._id, sender: req.body.friendId },
+        ],
+    });
     res.status(200).json({
         status: "success",
         message: "Friend deleted",
